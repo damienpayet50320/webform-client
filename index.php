@@ -30,9 +30,10 @@ $webform->init();
     <?php
     if ($webform->hasForm()) {
         $jsonData = $webform->getJsonData();
+        $jsonTheme = $webform->getJsonTheme();
         ?>
     <script type="text/javascript">
-        Webform.show(<?= $jsonData; ?>, function(data) {
+        Webform.show(<?= $jsonData; ?>, <?= $jsonTheme; ?>, function(data) {
             $.ajax({
                 type: 'POST',
                 url: 'index.php?slug=<?= $webform->getSlug(); ?>',

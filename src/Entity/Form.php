@@ -11,4 +11,6 @@ class Form
     public string $due_date;
 
     public string $json_data;
+
+    public string $json_theme;
 }

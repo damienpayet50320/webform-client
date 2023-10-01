@@ -77,6 +77,11 @@ class Webform
         return $this->form->json_data;
     }
 
+    public function getJsonTheme(): string
+    {
+        return $this->form->json_theme;
+    }
+
     public function showTitle(): string
     {
         if ($this->hasForm()) {
@@ -108,6 +113,7 @@ class Webform
             $formEntity->start_date = $formData['start_date'] ?? '';
             $formEntity->due_date = $formData['due_date'] ?? '';
             $formEntity->json_data = $formData['json_data'];
+            $formEntity->json_theme = $formData['json_theme'] ?? '{}';
 
             return $formEntity;
         }
