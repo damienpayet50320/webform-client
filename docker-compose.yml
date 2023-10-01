@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  php:
+    build: ./
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - /var/log/apache2/app:/var/log/apache2/
+    ports:
+      - "8080:80"

@@ -1,0 +1,21 @@
+{
+    "name": "pmecrm/php-webform-client",
+    "description": "PHP SDK to show Crm Webforms from PME CRM",
+    "autoload": {
+        "psr-4": {
+            "Proloweb\\WebformClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien PAYET",
+            "email": "damien@proloweb.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/http-foundation": "^6.3",
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/dotenv": "^6.3"
+    }
+}
