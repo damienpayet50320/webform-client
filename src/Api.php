@@ -28,7 +28,8 @@ class Api
     public function getWebformBySlug(string $instanceId, string $slug): Response
     {
         $query = http_build_query([
-            'instance_id' => $instanceId
+            'instance_id' => $instanceId,
+            'count_hit' => true
         ]);
 
         return new Response($this->client->get(self::API_ENDPOINT_SHOW_WEBFORM . $slug . '?' . $query));
